@@ -1,6 +1,6 @@
 # Pokédex 
 
-![Status badge](https://img.shields.io/badge/status-in%20progress-brightgreen.svg)
+![Status badge](https://img.shields.io/badge/status-in%20progress-ff5a5a.svg)
 
 An iOS Pokédex app featuring over 700 Pokémon made using [Pokéapi](http://pokeapi.co/about/).
 
