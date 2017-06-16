@@ -12,6 +12,12 @@
 		C9EB6F931EF3BB88009D88A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9EB6F911EF3BB88009D88A3 /* Main.storyboard */; };
 		C9EB6F951EF3BB88009D88A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9EB6F941EF3BB88009D88A3 /* Assets.xcassets */; };
 		C9EB6F981EF3BB88009D88A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9EB6F961EF3BB88009D88A3 /* LaunchScreen.storyboard */; };
+		C9EB6FA01EF3C50C009D88A3 /* Pokemon Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9EB6F9F1EF3C50C009D88A3 /* Pokemon Solid.ttf */; };
+		C9EB6FA21EF3DDF4009D88A3 /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EB6FA11EF3DDF4009D88A3 /* PokeCell.swift */; };
+		C9EB6FA41EF3E394009D88A3 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EB6FA31EF3E394009D88A3 /* Pokemon.swift */; };
+		C9EB6FAA1EF3E53B009D88A3 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = C9EB6FA91EF3E53B009D88A3 /* pokemon.csv */; };
+		C9EB6FAC1EF3E553009D88A3 /* pokemon center.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C9EB6FAB1EF3E553009D88A3 /* pokemon center.mp3 */; };
+		C9EB6FB31EF3E784009D88A3 /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EB6FB21EF3E784009D88A3 /* csv.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		C9EB6F941EF3BB88009D88A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9EB6F971EF3BB88009D88A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9EB6F991EF3BB88009D88A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9EB6F9F1EF3C50C009D88A3 /* Pokemon Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Solid.ttf"; sourceTree = "<group>"; };
+		C9EB6FA11EF3DDF4009D88A3 /* PokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
+		C9EB6FA31EF3E394009D88A3 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		C9EB6FA91EF3E53B009D88A3 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
+		C9EB6FAB1EF3E553009D88A3 /* pokemon center.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "pokemon center.mp3"; sourceTree = "<group>"; };
+		C9EB6FB21EF3E784009D88A3 /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +66,60 @@
 		C9EB6F8C1EF3BB88009D88A3 /* pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				C9EB6FA51EF3E45E009D88A3 /* Model */,
+				C9EB6FA61EF3E463009D88A3 /* View */,
+				C9EB6FA71EF3E46A009D88A3 /* Controller */,
+				C9EB6FAD1EF3E599009D88A3 /* Utilities */,
+				C9EB6FA81EF3E48E009D88A3 /* Resources */,
 				C9EB6F8D1EF3BB88009D88A3 /* AppDelegate.swift */,
-				C9EB6F8F1EF3BB88009D88A3 /* ViewController.swift */,
 				C9EB6F911EF3BB88009D88A3 /* Main.storyboard */,
 				C9EB6F941EF3BB88009D88A3 /* Assets.xcassets */,
 				C9EB6F961EF3BB88009D88A3 /* LaunchScreen.storyboard */,
 				C9EB6F991EF3BB88009D88A3 /* Info.plist */,
 			);
 			path = pokedex;
+			sourceTree = "<group>";
+		};
+		C9EB6FA51EF3E45E009D88A3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C9EB6FA31EF3E394009D88A3 /* Pokemon.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C9EB6FA61EF3E463009D88A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C9EB6FA11EF3DDF4009D88A3 /* PokeCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C9EB6FA71EF3E46A009D88A3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C9EB6F8F1EF3BB88009D88A3 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C9EB6FA81EF3E48E009D88A3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C9EB6FAB1EF3E553009D88A3 /* pokemon center.mp3 */,
+				C9EB6FA91EF3E53B009D88A3 /* pokemon.csv */,
+				C9EB6F9F1EF3C50C009D88A3 /* Pokemon Solid.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C9EB6FAD1EF3E599009D88A3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C9EB6FB21EF3E784009D88A3 /* csv.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +155,7 @@
 					C9EB6F891EF3BB88009D88A3 = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = P93AR4Y346;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -125,8 +184,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9EB6F981EF3BB88009D88A3 /* LaunchScreen.storyboard in Resources */,
+				C9EB6FA01EF3C50C009D88A3 /* Pokemon Solid.ttf in Resources */,
+				C9EB6FAC1EF3E553009D88A3 /* pokemon center.mp3 in Resources */,
 				C9EB6F951EF3BB88009D88A3 /* Assets.xcassets in Resources */,
 				C9EB6F931EF3BB88009D88A3 /* Main.storyboard in Resources */,
+				C9EB6FAA1EF3E53B009D88A3 /* pokemon.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +199,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9EB6FA21EF3DDF4009D88A3 /* PokeCell.swift in Sources */,
 				C9EB6F901EF3BB88009D88A3 /* ViewController.swift in Sources */,
 				C9EB6F8E1EF3BB88009D88A3 /* AppDelegate.swift in Sources */,
+				C9EB6FA41EF3E394009D88A3 /* Pokemon.swift in Sources */,
+				C9EB6FB31EF3E784009D88A3 /* csv.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +369,7 @@
 				C9EB6F9E1EF3BB88009D88A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
