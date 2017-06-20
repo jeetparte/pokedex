@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -138,15 +139,65 @@
                     <connections>
                         <outlet property="collectionView" destination="dQC-px-0h3" id="JPT-4A-rcu"/>
                         <outlet property="searchBar" destination="Vlq-4A-i96" id="zzs-qy-Fnn"/>
+                        <segue destination="KQ2-3v-x3d" kind="show" identifier="showPokemonDetailSegue" id="ucP-gy-RN5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="181.69014084507043" y="191.25"/>
         </scene>
+        <!--Pokemon Detail View Controller-->
+        <scene sceneID="OV9-KR-wBl">
+            <objects>
+                <viewController id="KQ2-3v-x3d" customClass="PokemonDetailViewController" customModule="pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vae-lA-YDd"/>
+                        <viewControllerLayoutGuide type="bottom" id="WqV-Bh-MUU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b6o-f1-j7b">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did reach here!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSy-50-40U">
+                                <rect key="frame" x="101.5" y="274" width="117" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="dyL-em-27k"/>
+                                    <constraint firstAttribute="width" constant="117" id="v0k-9e-uAB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3K-86-8Wx">
+                                <rect key="frame" x="16" y="20" width="40" height="26"/>
+                                <color key="backgroundColor" red="1" green="0.35294117650000001" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="hIw-mM-TTQ"/>
+                                    <constraint firstAttribute="width" constant="40" id="jmx-aR-GDC"/>
+                                </constraints>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="KQ2-3v-x3d" eventType="touchUpInside" id="0aO-0c-VW7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JSy-50-40U" firstAttribute="centerX" secondItem="b6o-f1-j7b" secondAttribute="centerX" id="2Kb-Xm-4iv"/>
+                            <constraint firstItem="W3K-86-8Wx" firstAttribute="leading" secondItem="b6o-f1-j7b" secondAttribute="leadingMargin" id="GVD-np-CC6"/>
+                            <constraint firstItem="W3K-86-8Wx" firstAttribute="top" secondItem="Vae-lA-YDd" secondAttribute="bottom" id="pjW-Td-hcO"/>
+                            <constraint firstItem="JSy-50-40U" firstAttribute="centerY" secondItem="b6o-f1-j7b" secondAttribute="centerY" id="r76-H3-Jb5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ovD-Ct-Gvl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1256.25" y="199.64788732394368"/>
+        </scene>
     </scenes>
     <resources>
         <image name="2" width="120" height="120"/>
+        <image name="back" width="100" height="67"/>
         <image name="bg" width="1920" height="1200"/>
         <image name="music" width="100" height="100"/>
     </resources>
