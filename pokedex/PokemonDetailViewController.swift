@@ -10,10 +10,18 @@ import UIKit
 
 class PokemonDetailViewController: UIViewController {
 
+    var pokemon: Pokemon!
+    
+    
+    @IBOutlet weak var pokemonNameLabel: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    }
+        //update properties using pokemon
+        pokemonNameLabel.text = pokemon.name.capitalized
+        
+}
     @IBAction func backButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
