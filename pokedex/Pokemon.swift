@@ -95,7 +95,7 @@ class Pokemon {
                         if let flavorTextEntries = dict["flavor_text_entries"] as? [Dictionary<String, AnyObject>] {
                             let desiredEntry =  flavorTextEntries[1]
                             let pokemonDescription: String = desiredEntry["flavor_text"]! as! String
-                            self._description = pokemonDescription
+                            self._description = pokemonDescription.removeWhitespacesAndNewlines()
                         }
                     }
                     completion()
