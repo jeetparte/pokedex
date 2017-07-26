@@ -9,6 +9,5 @@ import Foundation
 extension String {
     func removeWhitespacesAndNewlines() -> String {
         return self.components(separatedBy: CharacterSet.whitespacesAndNewlines).filter{ !$0.isEmpty }.joined(separator: " ")
-        
     }
 }

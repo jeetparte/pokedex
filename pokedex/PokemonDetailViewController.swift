@@ -10,41 +10,34 @@ import UIKit
 import Alamofire
 
 class PokemonDetailViewController: UIViewController {
-
-    var pokemon: Pokemon!
     
-    
+    weak var pokemon: Pokemon!
     @IBOutlet weak var pokemonNameLabel: UILabel!
     @IBOutlet weak var pokemonImage: UIImageView!
     @IBOutlet weak var currentEvolutionImage: UIImageView!
     @IBOutlet weak var nextEvolutionImage: UIImageView!
-    
     @IBOutlet weak var pokemonDescriptionLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var speedLabel: UILabel!
     @IBOutlet weak var hpLabel: UILabel!
-    
     @IBOutlet weak var defenseLabel: UILabel!
     @IBOutlet weak var specialDefenseLabel: UILabel!
     @IBOutlet weak var attackLabel: UILabel!
     @IBOutlet weak var specialAttackLabel: UILabel!
-    
     @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //update properties using pokemon
         pokemonNameLabel.text = pokemon.name.capitalized
-        
         if let pokemonImage = UIImage(named: "\(pokemon.pokedexID)") {
             self.pokemonImage.image = pokemonImage
             self.currentEvolutionImage.image = pokemonImage
         }
-        
         self.downloadPokemonDetails {
             self.updateUI()
         }
-}
+    }
     
     func downloadPokemonDetails(completion: @escaping downloadComplete) {
         let pokemonID = "\(pokemon.pokedexID)/"
@@ -70,8 +63,11 @@ class PokemonDetailViewController: UIViewController {
         specialAttackLabel.text = "\(pokemon.special_attack)"
         pokemonDescriptionLabel.text = pokemon.description
     }
-    
-        @IBAction func backButtonPressed(_ sender: Any) {
+}
+
+//MARK: - IBActions
+extension PokemonDetailViewController {
+    @IBAction func backButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
 }

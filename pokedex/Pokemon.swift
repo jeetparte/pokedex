@@ -84,9 +84,7 @@ class Pokemon {
     }
     
     convenience init(pokemonDict: Dictionary<String, AnyObject>, completion: @escaping downloadComplete) {
-        
         self.init(name: "", pokedexID: 0)
-        
         //Download description from API
         if let speciesDict = pokemonDict["species"] as? Dictionary<String, AnyObject> {
             if let speciesURL = speciesDict["url"] as? String {
@@ -102,12 +100,10 @@ class Pokemon {
                 }
             }
         }
-        
         //Set name and pokedexID
         if let name = pokemonDict["name"] as? String {
             self._name = name.capitalized
         }
-        
         if let pokedexID = pokemonDict["id"] as? Int {
             self._pokedexID = pokedexID
         }
@@ -116,7 +112,6 @@ class Pokemon {
             let primaryType = types[0]
             let primaryTypeName = primaryType["type"]?["name"] as! String
             self._type = primaryTypeName.capitalized
-            
             if types.count > 1 { //there are more than one types
                 for x in 1..<types.count {
                     let type = types[x]
@@ -126,14 +121,12 @@ class Pokemon {
                 }
             }
         }
-        
         //Setting stats
         if let stats = pokemonDict["stats"] as? [Dictionary<String, AnyObject>] {
             for dict in stats {
                 if let stat = dict["stat"] as? Dictionary<String, AnyObject> {
                     let statType: String = stat["name"]! as! String
                     let statValue: Int = dict["base_stat"]! as! Int
-                    
                     switch statType {
                     case "speed":
                         self._speed = statValue
@@ -153,7 +146,6 @@ class Pokemon {
                 }
             }
         }
-        
         //Setting next evolution ID
         let pokemonID = "\(self._pokedexID!)/"
         let pokeapi_url = POKEAPI_V1_BASE_URL + pokemonID
@@ -163,7 +155,6 @@ class Pokemon {
                     if let nextEvolution = evolutions[0]["to"] as? String {
                         if nextEvolution.range(of: "mega") == nil {
                             self._nextEvolution! = nextEvolution
-                            
                             if let nextEvolutionURI = evolutions[0]["resource_uri"] as? String {
                                 let nextEvolutionID = nextEvolutionURI.replacingOccurrences(of: "/api/v1/pokemon/", with: "").replacingOccurrences(of: "/", with: "")
                                 self._nextEvolutionID! = Int(nextEvolutionID)!
