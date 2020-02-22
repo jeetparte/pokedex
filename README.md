@@ -1,6 +1,6 @@
 # Pokédex 
 
-![Pokédex Logo](https://bulbapedia.bulbagarden.net/wiki/File:Pokédex_logo.png)
+![Pokédex Logo](https://cdn.bulbagarden.net/upload/archive/4/4b/20100413180610%21Pokédex_logo.png)
 
 ## About
 
