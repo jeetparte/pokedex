@@ -8,7 +8,7 @@
 
 A *Pokédex* is an encylopedia containing information about all Pokémon in the [Pokémon][3] world.
  
-This Pokédex app features a searchable collection of Pokémons. Details about a Pokémon show up on selection.  
+This Pokédex app features a searchable collection of Pokémon. Details about a Pokémon show up on selection.  
 
 Nostalgic Pokémon music plays in the background.
 
